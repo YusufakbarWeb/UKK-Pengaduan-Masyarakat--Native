@@ -1,4 +1,5 @@
-<?php  $site_url = 'http://localhost/PengaduanMasyarakat-master/' ?>
+<!-- change site url to load bootstrap -->
+<?php  $site_url = ''  ?>
 <!doctype html>
 <html lang="en">
   <head>
