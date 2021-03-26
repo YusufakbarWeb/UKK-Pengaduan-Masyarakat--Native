@@ -42,7 +42,10 @@ require('view/layouts/header.php')
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
-    <div class="card-header">Login Masyarakat</div>
+    <?php if(isset($error)):?>
+    <div class="alert alert-danger">username atau password anda salah</div>
+    <?php endif ;?>
+    <div class="card-header">Login <strong>Masyarakat</strong></div>
       <div class="card">
         <div class="card-body">
           <form class="form-group" method="post" action="">
@@ -56,11 +59,8 @@ require('view/layouts/header.php')
             </div>
             <div class="form-group">
               <button class="btn  btn-primary" type="submit" name="submit">Login</button>
-              <a class="btn  btn-danger" href="view/admin/login.php">Login Sebagai Petugas</a>
+              <a class="btn  btn-danger float-right" href="view/admin/login.php">Login Sebagai Petugas</a>
             </div>
-            <?php if(isset($error)):?>
-            <p class="text-danger ">username/password salah</p>
-            <?php endif ;?>
           </form>
         </div>
       </div>

@@ -50,14 +50,12 @@ function daftar($data){
   $password = $data['password'];
   $password2 = $data['password2'];
 
-  //cek akun
-  $ceking = mysqli_query($conn,"SELECT * FROM masyarakat WHERE username ='$username' ");
-  if(mysqli_fetch_All($ceking)){
+  $check = mysqli_query($conn,"SELECT * FROM masyarakat WHERE username ='$username' ");
+  if(mysqli_fetch_All($check)){
     echo "<script> alert('akun telah terdaftar');</script>";
     return false;
   }
 
-  // cek password
   if($password != $password2){
     echo "<script> alert('password tidak sama')</script>";
   }
@@ -73,7 +71,7 @@ function daftar($data){
 function tanggapan($nik,$data){
   $conn = DBConnection();
   $nik = $nik;
-  $tanggal = $data['tanggal'];
+  $tanggal = date('Y-m-d');
   $isi = $data['isi'];
   $status = '0';
   $gambar = upload();

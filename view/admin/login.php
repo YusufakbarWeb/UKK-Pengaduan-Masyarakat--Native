@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 require('../../function.php');
 $conn = DBConnection();
   if(isset($_POST['submit'])){
@@ -16,21 +15,10 @@ $conn = DBConnection();
           $_SESSION['password'] = $password;
           $_SESSION['id_petugas'] = $data['id_petugas'];
           $_SESSION['level'] = $data['level'];
-          if($data['level'] == 'admin'){
           header('location:index.php');
-          
-          }else if($data['level'] == 'petugas'){
-            header('location:../petugas/index.php');
-            
-          }else{
-            return false;
-          }
-        
         }
     }
-
     $error = true;
-
   }else if(isset($_POST['regist'])){
      header('location:../registrasi.php');
   }
@@ -40,7 +28,10 @@ require('../layouts/header.php')
 <div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
-    <div class="card-header">Login Petugas</div>
+    <?php if(isset($error)):?>
+    <div class="alert alert-danger">username atau password anda salah</div>
+    <?php endif ;?>
+    <div class="card-header">Login <strong>Petugas</strong></div>
       <div class="card">
         <div class="card-body">
           <form class="form-group" method="post" action="">
@@ -54,11 +45,8 @@ require('../layouts/header.php')
             </div>
             <div class="form-group">
               <button class="btn btn-primary" type="submit" name="submit">Login</button>
-              <a class="btn btn-danger" href="../../index.php">Login Sebagai Masyarakat</a>
+              <a class="btn btn-danger float-right" href="../../index.php">Login Sebagai Masyarakat</a>
             </div>
-            <?php if(isset($error)):?>
-            <p class="text-danger ">username/password salah</p>
-            <?php endif ;?>
           </form>
         </div>
       </div>

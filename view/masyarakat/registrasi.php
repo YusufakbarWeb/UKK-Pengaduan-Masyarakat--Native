@@ -33,5 +33,5 @@ require('../layouts/header.php');
        <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword agin" class="form-control" placeholder="Password" name="password2" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">submit</button>
-    </form>
+    </form> 
 <?php require('../layouts/footer.php'); ?>

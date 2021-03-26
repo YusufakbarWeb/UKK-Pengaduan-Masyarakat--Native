@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>Pengaduan Masyarakat</title>
-    <link href="<?= $site_url ?>assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $site_url ?>assets/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">

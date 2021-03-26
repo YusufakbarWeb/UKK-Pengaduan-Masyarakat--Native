@@ -14,9 +14,6 @@ if(isset($_POST['submit'])){
 
 ?>
 <?php require('../layouts/header.php') ?>
-
-<body>
-
   <div class="container mt-5">
     <div class="row  justify-content-center">
       <div class="col-md-6">
@@ -53,18 +50,16 @@ if(isset($_POST['submit'])){
                   required>
               </div>
               <div class="form-group">
-                <label for="inputPassword" class="sr-only">Password</label>
+                <label for="inputPassword" class="sr-only">Konfirmasi Pasword</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password entry"
                   name="passwords" required>
               </div>
               <button class="btn btn-primary" type="submit" name="submit">Register</button>
-              <a class="btn btn-primary" href="index.php">kembali</a>
-              <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+              <a class="btn btn-danger" href="index.php">kembali</a>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-
   <?php require('../layouts/footer.php') ?>
