@@ -2,8 +2,6 @@
 session_start();
 require('../../function.php');
 $conn = DBConnection();
-  //simpan session username
-  $name = $_SESSION['username'];
 
   //cek sesi
   if(!isset($_SESSION['login'])){
