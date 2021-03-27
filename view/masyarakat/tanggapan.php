@@ -44,16 +44,18 @@ require('../layouts/header.php');
             if($status == '0'){
               $status = 'terkirim';
             }else if($status == 'proses'){
-              $status = 'terbaca';
+              $status = 'diproses';
             }else{
               $status = 'diterima';
             }
+
+            $site_url = 'http://localhost/UKK-Pengaduan-Masyarakat--Native/';
             ?>
           <tr>
             <td><?= $item['nama'];?></td>
             <td><?= $item['tgl_pengaduan'];?></td>
             <td><?= $item['isi_laporan'];?></td>
-            <td><img src="../../img/<?= $data['foto'];?>"  width ="50px"alt=""></td>
+            <td><img src="<?= $site_url ?>/img/<?= $item['foto'];?>"  width ="50px"alt=""></td>
             <td><?= $item['tanggapan'];?></td>
             <td><?= $item['tgl_tanggapan'];?></td>
             <td><?= $item['nama_petugas'] ?></td>

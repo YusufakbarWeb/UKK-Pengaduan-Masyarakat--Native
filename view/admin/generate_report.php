@@ -17,6 +17,7 @@ $query = "SELECT * FROM tanggapan INNER JOIN pengaduan ON tanggapan.id_pengaduan
 $execute = mysqli_query($conn,$query);
 $Pengaduan = mysqli_fetch_All($execute,MYSQLI_ASSOC);
 ?>
+<?php  $site_url = 'http://localhost/UKK-Pengaduan-Masyarakat--Native/'  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,12 +25,12 @@ $Pengaduan = mysqli_fetch_All($execute,MYSQLI_ASSOC);
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Report</title>
-	<link href="../../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= $site_url ?>/assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <style>
 	@media print{
-		.btn-primary {
+		.btn-danger {
 			display:none;
 		}
 	}
@@ -69,7 +70,7 @@ $Pengaduan = mysqli_fetch_All($execute,MYSQLI_ASSOC);
 							<td><?= $item['tgl_pengaduan'] ?></td>
 							<td><?= $item['tgl_tanggapan'] ?></td>
 							<td><?= $item['isi_laporan'] ;?></td>
-							<td><img src="../../img/<? $item['foto'] ;?>" width="100px" alt=""></td>
+							<td><img src="<?= $site_url ?>/img/<?= $item['foto'] ;?>" width="100px" alt=""></td>
 							<td><?= $item['tanggapan'] ;?></td>
 						</tr>
 						<?php } ?>

@@ -41,14 +41,15 @@ if(isset($_POST['verify'])){
           </thead>
           <tbody>
             <?php foreach($pengaduan as $data) :
-            $status = ''; 
-            if($data['status'] == '0'){
+             $status = $data['status'];
+             if($status == '0'){
                $status = 'terkirim';
-            }else if($status == 'proses'){ 
-              $status = 'Sedang Di Proses';
-            }else{
-              $status = 'Selesai';
-            }
+             }else if($status == 'proses'){
+               $status = 'diproses';
+             }else{
+               $status = 'diterima';
+             }
+ 
             ?>
             <tr>
               <td><?= $data['tgl_pengaduan'];?></td>

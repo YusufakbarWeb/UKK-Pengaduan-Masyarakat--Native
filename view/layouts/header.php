@@ -1,5 +1,5 @@
 <!-- change site url to load bootstrap -->
-<?php  $site_url = ''  ?>
+<?php  $site_url = 'http://localhost/UKK-Pengaduan-Masyarakat--Native/'  ?>
 <!doctype html>
 <html lang="en">
   <head>

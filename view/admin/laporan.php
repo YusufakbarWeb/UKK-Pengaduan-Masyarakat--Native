@@ -29,7 +29,7 @@ $getdata = mysqli_fetch_All($execute,MYSQLI_ASSOC);
           Cetak Laporan
         </div>
         <div class="card-body">
-        <a href="generate_report.php?id=<?= $data['id_tanggapan'] ?>" class="btn btn-primary my-2 float-right">Cetak </a>
+        <a href="generate_report.php" class="btn btn-primary my-2 float-right">Cetak </a>
           <div class="table-responsive">
           <table class="table table-bordered">
             <thead class="bg-dark text-white ">

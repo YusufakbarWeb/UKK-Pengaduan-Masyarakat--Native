@@ -2,7 +2,7 @@
 
 
 function DBConnection(){
-  return mysqli_connect('localhost','root','','pengaduan_masyarakat');
+  return mysqli_connect('localhost','root','','db_pengaduan_masyarakat');
 }
 
 function registrasi($data){
